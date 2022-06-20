@@ -1,0 +1,1 @@
+echo "alias build='CURRENT=$(pwd) && cd $GOPATH/src/github.com/santiagozuluaga/aws-serverless-api-go && rm -rf ./bin && cd api/ && for dir in $(ls -d */) ; do cd $dir && for dir in $(ls -d */) ; do echo $(make -C $dir) ; done && cd - ; done && cd $CURRENT'" >> ~/.bashrc

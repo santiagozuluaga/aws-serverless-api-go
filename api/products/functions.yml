@@ -1,0 +1,31 @@
+functions:
+  createProduct:
+    handler: ./bin/products/create/main
+    events:
+      - httpApi:
+          path: /products
+          method: post
+  findProduct:
+    handler: ./bin/products/findOne/main
+    events:
+      - httpApi:
+          path: /products
+          method: get
+  findProducts:
+    handler: ./bin/products/find/main
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: get
+  updateProduct:
+    handler: ./bin/products/update/main
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: put
+  deleteProduct:
+    handler: ./bin/products/delete/main
+    events:
+      - httpApi:
+          path: /products/{id}
+          method: delete

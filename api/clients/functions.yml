@@ -1,0 +1,31 @@
+functions:
+  createClient:
+    handler: ./bin/clients/create/main
+    events:
+      - httpApi:
+          path: /clients
+          method: post
+  findClient:
+    handler: ./bin/clients/findOne/main
+    events:
+      - httpApi:
+          path: /clients
+          method: get
+  findClients:
+    handler: ./bin/clients/find/main
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: get
+  updateClient:
+    handler: ./bin/clients/update/main
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: put
+  deleteClient:
+    handler: ./bin/clients/delete/main
+    events:
+      - httpApi:
+          path: /clients/{id}
+          method: delete

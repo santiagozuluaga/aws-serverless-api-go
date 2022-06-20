@@ -1,0 +1,10 @@
+service: aws-serverless-api-go
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: go1.x
+
+functions:
+  - ${file(./api/clients/functions.yml):functions}
+  - ${file(./api/products/functions.yml):functions}
